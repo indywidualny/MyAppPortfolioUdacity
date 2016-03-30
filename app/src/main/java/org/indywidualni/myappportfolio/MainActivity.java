@@ -41,32 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.media_streamer:
-                Toast.makeText(this, String.format(getString(R.string.button_toast),
-                        getString(R.string.media_streamer)), Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.scores_app:
-                Toast.makeText(this, String.format(getString(R.string.button_toast),
-                        getString(R.string.scores_app)), Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.library_app:
-                Toast.makeText(this, String.format(getString(R.string.button_toast),
-                        getString(R.string.library_app)), Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.build_it_bigger:
-                Toast.makeText(this, String.format(getString(R.string.button_toast),
-                        getString(R.string.build_it_bigger)), Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.bacon_reader:
-                Toast.makeText(this, String.format(getString(R.string.button_toast),
-                        getString(R.string.bacon_reader)), Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.capstone:
-                Toast.makeText(this, String.format(getString(R.string.button_toast),
-                        getString(R.string.capstone)), Toast.LENGTH_SHORT).show();
-                break;
-        }
+        String buttonText = ((Button) v).getText().toString();
+        Toast.makeText(this, String.format(getString(R.string.button_toast), buttonText),
+                Toast.LENGTH_SHORT).show();
     }
 
 }
